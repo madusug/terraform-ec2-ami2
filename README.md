@@ -39,3 +39,9 @@ I validated that my resources were created on aws. First it was the EC2 instance
 
 I was also able to create a new ami from the instance I created.
 ![amisuccess](./img/2%20ami%20success.jpg)
+
+I ran into some issues when pushing to git. To rectify, I created:
+- .gitignore
+
+Then I ran:
+git filter-branch -f --index-filter 'git rm --cached -r --ignore-unmatch .terraform/'
